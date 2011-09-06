@@ -30,15 +30,6 @@ mark {
   background-color: transparent;
 }
 
-ul, ol {
-  list-style: none;
-}
-
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
 caption, th {
   text-align: left;
 }
@@ -66,6 +57,30 @@ p, blockquote, ul, ol, dl, table, pre, figure {
 a {
   color: #0385d8;
   text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #005184;
+}
+
+ol, ul {
+  margin-left: 40px;
+}
+
+ul > li {
+  list-style-type: disc;
+}
+
+blockquote {
+  border-left: 10px solid rgba(0, 0, 0, 0.1);
+  padding-left: 30px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 /* 2. LAYOUT
@@ -175,21 +190,36 @@ a {
 .heading-minor {
   font-family: "Helvetica Neue", "Arial", sans-serif;
   font-weight: bold;
+  margin-top: 22px;
+  margin-bottom: 22px;
 }
 
 .heading-major {
   font-size: 36px;
   line-height: 44px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  padding-bottom: 7px;
 }
 
 .heading {
   font-size: 24px;
-  line-height: 44px;
+  line-height: 30px;
 }
 
 .heading-minor {
   font-size: 18px;
   line-height: 22px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* . BOXES
+••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+.box {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding-left: 11px;
+  padding-right: 11px;
 }
 
 /* . FORMS
