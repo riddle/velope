@@ -2,7 +2,7 @@
 
 ## Work in progress
 
-Imagine a situation the back-end team starts working on the app you’re designing – you need time to finish the job properly while they’re forced to work with raw, unstyled HTML files. It’s painful, just ask them.
+Imagine a following situation: the back-end team starts working on the app you’re designing – you need time to finish the job properly while they’re forced to work with raw, unstyled HTML files. It’s painful, just ask them.
 
 Velope was created to solve this problem – developers can take a set of pre-made HTML blocks like columns, headings, form widgets and apply them to organize the webapp before the design team finishes their work.
 
