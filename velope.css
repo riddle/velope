@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+/* Velope.css - CSS framework used exclusively for production needs */
+/* If you see it publicly on the web, someone didn’t understand what “production” means. */
+
+/* 0. RESET
+••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas,
+caption, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset,
+figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup,
+html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav,
+object, ol, p, pre, q, samp, section, small, span, strong, sub, summary,
+sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, canvas, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+mark {
+  background-color: transparent;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+caption, th {
+  text-align: left;
+}
+
+q:after, q:before {
+  content: "";
+}
+
+
+/* 1. VANILLA ELEMENTS
+••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+body {
+  font: normal 14px/22px "Lucida Grande", "Tahoma", "Verdana", sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 22px 0;
+}
+
+p, blockquote, ul, ol, dl, table, pre, figure {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #0385d8;
+  text-decoration: underline;
+}
+
+/* 2. LAYOUT
+••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+/* 2.1 =Layout Wrappers
+======================================================================= */
+
+.wrap {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 2.2 =Columns
+======================================================================= */
+
+.columns::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.columns > .first,
+.columns > .second,
+.columns > .third,
+.columns > .last {
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Columns are equal by default */
+
+.columns > .first,
+.columns > .last {
+  width: 50%;
+}
+
+.columns.three > .first,
+.columns.three > .second,
+.columns.three > .last {
+  width: 33.333333%;
+}
+
+.columns.four > .first,
+.columns.four > .second,
+.columns.four > .third,
+.columns.four > .last {
+  width: 25%;
+}
+
+.columns.gutter > .first,
+.columns.three.gutter > .second,
+.columns.four.gutter > .second,
+.columns.four.gutter > .third {
+  padding-right: 11px;
+}
+
+.columns.gutter > .last {
+  padding-left: 11px;
+}
+
+/* 2.3 =Vertical Spacing
+======================================================================= */
+
+.gap {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.gap.quarter {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.gap.half {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.gap.double {
+  margin-top: 44px;
+  margin-bottom: 44px;
+}
+
+.gap.triple {
+  margin-top: 66px;
+  margin-bottom: 66px;
+}
+
+.gap.push {
+  margin-top: 0;
+}
+
+.gap.pull {
+  margin-bottom: 0;
+}
+
+
+/* 3. HEADINGS
+••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+.heading-major,
+.heading,
+.heading-minor {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-weight: bold;
+}
+
+.heading-major {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.heading {
+  font-size: 24px;
+  line-height: 44px;
+}
+
+.heading-minor {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+/* . FORMS
+••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+button,
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font: inherit;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
