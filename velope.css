@@ -103,51 +103,108 @@ table {
 /* 2.2 =Columns
 ======================================================================= */
 
-.columns::after {
-  content: "";
-  display: block;
-  clear: both;
+.columns {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
 }
 
 .columns > .first,
 .columns > .second,
 .columns > .third,
 .columns > .last {
-  float: left;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
 }
 
-/* Columns are equal by default */
+.columns > .second,
+.columns > .third,
+.columns > .last {
+  margin-left: 11px;
+}
 
 .columns > .first,
-.columns > .last {
-  width: 50%;
+.columns > .second,
+.columns > .third {
+  margin-right: 11px;
 }
 
-.columns.three > .first,
-.columns.three > .second,
-.columns.three > .last {
-  width: 33.333333%;
+.columns.rule > .first,
+.columns.rule > .second,
+.columns.rule > .third {
+  position: relative;
 }
 
-.columns.four > .first,
-.columns.four > .second,
-.columns.four > .third,
-.columns.four > .last {
-  width: 25%;
+.columns.rule > .first::after,
+.columns.rule > .second::after,
+.columns.rule > .third::after,
+.columns.rule > .second::before,
+.columns.rule > .third::before,
+.columns.rule > .last::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  background-color: #d9d9d9;
 }
 
-.columns.gutter > .first,
-.columns.three.gutter > .second,
-.columns.four.gutter > .second,
-.columns.four.gutter > .third {
-  padding-right: 11px;
+.columns.rule > .first::after,
+.columns.rule > .second::after,
+.columns.rule > .third::after {
+  right: -23px;  
 }
 
-.columns.gutter > .last {
-  padding-left: 11px;
+.columns.rule > .second::before,
+.columns.rule > .third::before,
+.columns.rule > .last::before {
+  left: -23px;  
+}
+
+.columns.rule > .second,
+.columns.rule > .third,
+.columns.rule > .last {
+  margin-left: 22px;
+}
+
+.columns.rule > .first,
+.columns.rule > .second,
+.columns.rule > .third {
+  margin-right: 23px;
+}
+
+.columns.collapse > .second,
+.columns.collapse > .third,
+.columns.collapse > .last {
+  margin-left: 0;
+}
+
+.columns.collapse > .first,
+.columns.collapse > .second,
+.columns.collapse > .third {
+  margin-right: 0;
+}
+
+.columns.collapse.rule > .first::after,
+.columns.collapse.rule > .second::after,
+.columns.collapse.rule > .third::after {
+  display: none;
+}
+
+.columns.collapse.rule > .second,
+.columns.collapse.rule > .third,
+.columns.collapse.rule > .last {
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.columns.collapse.rule > .first::after,
+.columns.collapse.rule > .second::after,
+.columns.collapse.rule > .third::after,
+.columns.collapse.rule > .second::before,
+.columns.collapse.rule > .third::before,
+.columns.collapse.rule > .last::before {
+  display: none;
 }
 
 /* 2.3 =Vertical Spacing
